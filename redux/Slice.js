@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const DataSlice = createSlice({
-    name: "authen",
+    name: "data",
     initialState: {
         Categorys: [],
         Carousels: []

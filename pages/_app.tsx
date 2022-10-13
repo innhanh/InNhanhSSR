@@ -1,10 +1,11 @@
 import Footer from '../components/footer';
 import Hearder from '../components/hearder'
 
-import '../styles/globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 import { persistor, Store } from '../redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';

@@ -9,8 +9,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>IN NHANH</title>
-        <meta name="description" content="In nhanh In Bản Vẽ In quảng cáo" />
-        <link rel="icon" href="/favicon.ico" />
+      
       </Head>
 
       <main className={styles.main}>
@@ -18,6 +17,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         <input type={"text"} onChange={(e) => setUserName(e.target.value)} value={userName} />
+        <button className='btn'>Login</button>
 
         <p className={styles.description}>
           Get started by editing{' '}
