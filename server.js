@@ -24,6 +24,6 @@ app.prepare().then(() => {
 
     server.listen(port, err => {
         if (err) throw err
-        console.log(`Server is running on http://${process.env.DOMAIN_NAME}:${port}`);
+        console.log(`Server is running on ${process.env.DOMAIN_NAME}:${port}`);
     })
 })

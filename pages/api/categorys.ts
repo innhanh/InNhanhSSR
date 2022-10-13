@@ -32,9 +32,10 @@ const categorys = [
   },
   {
     name: "In Bản Vẽ",
-    link: "/in-bane-ve"
+    link: "/in-ban-ve"
   }
-]
+];
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   switch (req.method) {
