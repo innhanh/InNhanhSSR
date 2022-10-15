@@ -1,0 +1,14 @@
+#hearder .nav-top {
+  background-color: rgb(2, 1, 59);
+}
+#hearder .nav-top .nav-link {
+  color: white;
+}
+#hearder .nav-top .nav-link i {
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+#login {
+  background-color: red;
+}/*# sourceMappingURL=main.css.map */

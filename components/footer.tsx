@@ -1,3 +1,4 @@
+// import "../styles/footer.scss";
 function Footer() {
     return (
         <div id="footer">
