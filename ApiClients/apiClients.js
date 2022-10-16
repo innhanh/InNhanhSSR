@@ -1,3 +1,4 @@
+import { toast } from "react-toastify"
 import { axiosClients } from "./axiosClients"
 
 export const ApiClients = {
@@ -9,8 +10,44 @@ export const ApiClients = {
             }).then((res) => {
                 dispath(CategorySuccess(res.data.Categorys))
             }).catch((err) => {
-                console.log(err)
+                if (err.response) {
+                    toast.error(err.response.data.error)
+                } else {
+                    toast.error(err)
+                }
             })
+        }
+    },
+    Carousels: {
+        GetAll: async (dispath, CarouselSuccess) => {
+            await axiosClients({
+                method: "GET",
+                url: "/carousels"
+            }).then((res) => {
+                dispath(CarouselSuccess(res.data.Carousels))
+            }).catch((err) => {
+                if (err.response) {
+                    toast.error(err.response.data.error)
+                } else {
+                    toast.error(err)
+                }
+            })
+        }
+    },
+    Productions:{
+        GetAll: async(dispath, ProductionSuccess)=>{
+            await axiosClients({
+                method: "GET",
+                url: "/productions"
+            }).then((res) => {
+                dispath(ProductionSuccess(res.data.Productions))
+            }).catch((err) => {
+                if (err.response) {
+                    toast.error(err.response.data.error)
+                } else {
+                    toast.error(err)
+                }
+            })  
         }
     }
 }

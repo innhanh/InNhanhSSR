@@ -1,0 +1,14 @@
+@keyframes AnimationContact {
+    to {
+        transform: translate(-50%, -50%) scale(1.4);
+        border: 7px solid rgb(235, 48, 48);
+    }
+}
+
+;
+
+@keyframes AnimationContactRotate {
+    to {
+        transform: rotate(-45deg);
+    }
+}

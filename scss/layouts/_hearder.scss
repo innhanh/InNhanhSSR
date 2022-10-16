@@ -1,12 +1,76 @@
 #hearder {
     .nav-top {
         background-color: rgb(2, 1, 59);
-        .nav-link{
+        align-items: center;
+
+        .nav-link {
             color: white;
-            i{
-                font-size: 10px;
+            padding: 0;
+            padding: 0;
+
+            i {
+                font-size: 10px!important;
                 margin-right: 10px;
             }
+
+            .hearder_tel {
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                margin: 0;
+            }
+
+            .btn_innhanh {
+                color: white;
+                border: 1px solid white;
+                margin: 0;
+            }
         }
+
+        .nav-contact {
+            i {
+                padding: 0;
+                margin: 0;
+                font-size: 25px;
+                color: white;
+                background-color: red;
+                width: 42px;
+                height: 42px;
+                line-height: 42px;
+                border-radius: 50%;
+                text-align: center;
+                position: relative;
+                transform: rotate(0deg);
+                animation-name: AnimationContactRotate;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 42px;
+                    height: 42px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1);
+                    border: 1px solid white;
+                    background-color: transparent !important;
+                    border-radius: 50%;
+                    animation-name: AnimationContact;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+    }
+
+    .nav-main {
+        .navbar-brand {
+            .logo {
+                max-width: 70px;
+            }
+        }
+
     }
 }

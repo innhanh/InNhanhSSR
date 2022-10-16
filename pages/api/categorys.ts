@@ -33,7 +33,15 @@ const categorys = [
   {
     name: "In Bản Vẽ",
     link: "/in-ban-ve"
-  }
+  },
+  {
+    name: "Thiết Kế Sáng Tạo",
+    link: "/thiet-ke"
+  },
+  {
+    name: "Setup Events",
+    link: "/setup-envents"
+  },
 ];
 
 
