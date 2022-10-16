@@ -20,7 +20,18 @@ app.prepare().then(() => {
 
     server.all('*', (req, res) => {
         return handle(req, res)
-    })
+    });
+    const { sequelize } = require("./models");
+
+    const CheckDatabase = async () => {
+        try {
+            await sequelize.authenticate();
+            console.log('Connection has been established successfully.');
+        } catch (error) {
+            console.error('Unable to connect to the database:', error);
+        }
+    };
+    CheckDatabase();
 
     server.listen(port, err => {
         if (err) throw err
