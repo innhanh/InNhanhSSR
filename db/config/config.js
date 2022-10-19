@@ -1,4 +1,5 @@
 'use strict'
+const dotenv = require("dotenv").config();
 module.exports = {
   development: {
     username: process.env.DB_USER,
