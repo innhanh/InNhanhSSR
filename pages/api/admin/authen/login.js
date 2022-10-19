@@ -13,7 +13,17 @@ export default async function handler(req, res) {
                     }
                 });
                 if (user) {
-                    return res.status(200).json({ mess: "Login success!" })
+                    if (bcryptjs.compareSync(pass, user.userName)) {
+                        if (key === process.env.KEY_ADMIN) {
+                            return res.status(200).json({ mess: "Login success!" })
+                        } else {
+                            return res.status(400).json({ error: "KEY_ADMIN wrong!" })
+                        }
+                    } else {
+                        return res.status(400).json({ error: "Passworld wrong!" })
+                    }
+                } else {
+                    return res.status(404).json({ error: "User not found!" })
                 }
             } catch (error) {
                 return res.status(500).json(error)

@@ -1,4 +1,4 @@
-const { Carousels } = require("../../db/models")
+const { Carousels } = require("../../db/models");
 
 const carousels = [
     {

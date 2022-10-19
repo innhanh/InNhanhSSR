@@ -15,7 +15,7 @@ function Hearder() {
             await ApiClients.Categorys.GetAll(dispath, CategorySuccess);
         };
         GetCate();
-    }, [])
+    }, []);
     return (
         <div id="hearder">
             <Navbar className="nav-top">

@@ -21,8 +21,23 @@ export const ApiAdmin = {
                 }
             })
         },
-        Register: async (userName, pass, mail, phone, key) => {
-
+        Register: async (userName, pass, email, phone, key) => {
+            await axiosClients({
+                method: "POST",
+                url: "/admin/authen/register",
+                data: {
+                    userName, pass, email, phone, key
+                }
+            }).then((res) => {
+                toast.success(res.data.mess)
+                router.replace("/admin/login")
+            }).catch((err) => {
+                if (err.response) {
+                    toast.error(err.response.data.error)
+                } else {
+                    toast.error(err)
+                }
+            })
         }
     }
 

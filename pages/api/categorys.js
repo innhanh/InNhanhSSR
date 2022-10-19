@@ -1,3 +1,4 @@
+const { Categorys } = require("../../db/models")
 const categorys = [
   {
     name: "In Nhanh",
@@ -42,7 +43,7 @@ const categorys = [
 ];
 
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   switch (req.method) {
     case "POST": {
       break;
@@ -53,9 +54,16 @@ export default function handler(req, res) {
     case "DELETE": {
       break;
     }
-    default:
-      res.status(200).json({ Categorys: categorys })
-      break;
+    default: {
+      try {
+        const list = await Categorys.findAll();
+        return res.status(200).json({ Categorys: list })
+      } catch (error) {
+        return res.status(500).json(error)
+      }
+    }
+
+
   }
 
 }
