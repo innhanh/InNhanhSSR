@@ -21,7 +21,7 @@ app.prepare().then(() => {
     server.all('*', (req, res) => {
         return handle(req, res)
     });
-    const { sequelize } = require("./models");
+    const { sequelize } = require("./db/models");
 
     const CheckDatabase = async () => {
         try {
